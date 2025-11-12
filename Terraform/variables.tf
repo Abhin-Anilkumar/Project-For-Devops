@@ -22,10 +22,15 @@ variable "env" {
   default     = "dev"
 }
 
+variable "public_ip" {
+  description = "The environment name for tagging."
+  default = "true"
+}
+
 variable "aws_region" {
   description = "The AWS region to create resources in."
   type        = string
-  default     = "us-east-1"
+  default     = "us-west-1"
 }
 
 variable "key_name" {
@@ -43,11 +48,11 @@ variable "private_key_path" {
 variable "instance_type" {
   description = "The EC2 instance type."
   type        = string
-  default     = "t2.micro"
+  default     = "t2.large"
 }
 
 variable "ami" {
   description = "The AMI for the EC2 instance."
   type        = string
-  default     = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (HVM), SSD Volume Type in us-east-1
+  default     = "ami-0e6a50b0059fd2cc3" 
 }

@@ -22,3 +22,8 @@ variable "env" {
   description = "The environment name for tagging."
   type        = string
 }
+
+variable "public_ip" {
+  description = "The environment name for tagging."
+  type        = string
+}

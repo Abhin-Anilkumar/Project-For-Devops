@@ -26,4 +26,5 @@ module "ec2" {
   subnet_id     = module.vpc.public_subnet_id
   key_name      = module.key-pair.key_name
   env           = var.env
+  public_ip =  var.public_ip
 }
