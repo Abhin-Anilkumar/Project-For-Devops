@@ -21,3 +21,33 @@ variable "env" {
   type        = string
   default     = "dev"
 }
+
+variable "aws_region" {
+  description = "The AWS region to create resources in."
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "key_name" {
+  description = "The name for the key pair."
+  type        = string
+  default     = "dev-key"
+}
+
+variable "private_key_path" {
+  description = "The local path to save the private key."
+  type        = string
+  default     = "dev-key.pem"
+}
+
+variable "instance_type" {
+  description = "The EC2 instance type."
+  type        = string
+  default     = "t2.micro"
+}
+
+variable "ami" {
+  description = "The AMI for the EC2 instance."
+  type        = string
+  default     = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (HVM), SSD Volume Type in us-east-1
+}
